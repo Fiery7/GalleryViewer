@@ -42,6 +42,7 @@
             <input class = "btn" type="submit" name="Submit">
         </form>
     </div>
+        <a href='slideshow.php'><button class=" slidebtn" >SLIDESHOW!</button></a>
         <script>
             function openForm() {
                 document.getElementById("U_Form").style.display = "none";
