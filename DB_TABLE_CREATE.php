@@ -31,8 +31,25 @@
         image_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         image_name VARCHAR(30) NOT NULL,
         album_name VARCHAR(30),
+        userid INT NOT NULL,
         file_loc VARCHAR(100) NOT NULL,
         date_time TIMESTAMP)";
+    
+    if ($conn->query($sql) === TRUE) {
+        echo "Table created successfully";
+    } 
+    else {
+        echo "Error creating table: " . $conn->error;
+    }
+    echo "<br><br>";
+
+    $sql = "DROP TABLE Users";
+    $conn->query($sql);
+
+    $sql="CREATE TABLE Users (
+        userid INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        email_id VARCHAR(40) UNIQUE NOT NULL,
+        pass_word VARCHAR(40) NOT NULL)";
     
     if ($conn->query($sql) === TRUE) {
         echo "Table created successfully";

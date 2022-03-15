@@ -47,11 +47,12 @@ body{
     opacity: 0.8;
 }
 
-.top_part .Upload {
+.top_part .Clicky {
     float: right;
     width: 20%;
     padding: 20px;
     text-align: center;
+    position: relative;
 }
 .popup{
     display: none;
@@ -94,8 +95,6 @@ body{
 }
 .open-button {
     border-radius: 5px;
-    background-color: rgb(0, 102, 170);
-    color: white;
     padding: 16px 20px;
     border: none;
     cursor: pointer;

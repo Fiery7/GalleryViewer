@@ -21,13 +21,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const createAccountForm = document.querySelector("#createAccount");
 
     document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-        e.preventDefault();
+        e.preventDefault();//prevents default behaviour of opening another link
         loginForm.classList.add("form--hidden");
         createAccountForm.classList.remove("form--hidden");
     });
 
+    // On clicking create account,login form gets added on and create account hidden.
+    //same goes on clicking login
+
     document.querySelector("#linkLogin").addEventListener("click", e => {
-        e.preventDefault();
+        e.preventDefault();//prevents default behaviour of opening another link
         loginForm.classList.remove("form--hidden");
         createAccountForm.classList.add("form--hidden");
     });
@@ -42,8 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
-            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
-                setInputError(inputElement, "Username must be at least 10 characters in length");
+            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 8) {
+                setInputError(inputElement, "Username must be at least 8 characters in length");
             }
         });
 

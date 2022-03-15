@@ -21,7 +21,10 @@
                 <input type="text" id="_Search" name="_Search" placeholder="Search here">
                 <input type="submit" value="Search">
         </form>
-    <div class = "Upload"><button class="open-button" onclick="openForm()">Upload</button></div>
+        <div class = "Clicky"><button class="open-button" style="background-color: rgb(0, 120, 0);
+        color: white;" onclick="location.href='index.php'">Login/Register</button></div>
+        <div class = "Clicky"><button class="open-button" style="background-color: rgb(0, 102, 170);
+        color: white;" onclick="openForm()">Upload</button></div>
     </div>
     <br><br>
     <?php
@@ -42,7 +45,6 @@
             <input class = "btn" type="submit" name="Submit">
         </form>
     </div>
-        <a href='slideshow.php'><button class=" slidebtn" >SLIDESHOW!</button></a>
         <script>
             function openForm() {
                 document.getElementById("U_Form").style.display = "none";
@@ -53,11 +55,6 @@
                 document.getElementById("U_Form").style.display = "block";
             }
         </script>
-
-    <div class="hero">
-        <div class="form-box">
-            
-        </div>
     </div>
     </body>
 </html>
