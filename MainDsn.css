@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(233, 255, 228);
+}
+.top_part{
+    background-color: rgb(177, 94, 255);
+    height: 100px;
+    box-shadow: 0px 5px 15px 10px #8547b8;
+}
+.top_part h1{
+    float: left;
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    font-family: 'Alegreya', serif;
+    font-weight: 700;
+}
+.top_part .Search{
+    float: left;
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    font-weight: 600;
+}
+.top_part .Search input[type=text]{
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+.top_part .Search input[type=submit]{
+    background-color: #dbd802;
+    font-weight: 700;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.top_part .Upload {
+    float: right;
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+}
+.popup{
+    display: none;
+    position: fixed;
+    background-color: white;
+    box-shadow: 0px 0px 15px 3px #4d4d4d;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    animation-name: popup_anim;
+    animation-duration: 0.5s;
+}
+.close_class{
+    animation-name: close_anim;
+    animation-duration: 0.5;
+}
+@keyframes popup_anim{
+    from{
+        width: 0;
+        height: 0;
+    }
+    to{
+        width: 365px;
+        height: 366px;
+    }
+}
+@keyframes close_anim{
+    from{
+        width: 365px;
+        height: 366px;
+    }
+    to{
+        width: 0;
+        height: 0;
+    }
+}
+.open-button {
+    border-radius: 5px;
+    background-color: rgb(0, 102, 170);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: absolute;
+    font-size: large;
+    right: 28px;
+    width: 280px;
+}
+.form-container {
+max-width: 500px;
+padding: 10px;
+background-color: white;
+}
+.form-container input[type=text]{
+    width: 70%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    vertical-align: middle;
+  }
+  .form-container input[type=text]:focus{
+    background-color: #ddd;
+    outline: none;
+  }
+  .form-container input[type=file]::-webkit-file-upload-button{
+    background-color: #04AA6D;
+    border-radius: 5px;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  .form-container .btn {
+    background-color: #0502a7;
+    border-radius: 5px;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  .form-container .close_btn {
+    background-color: rgb(184, 0, 0);
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    color: white;
+    float: right;
+    font-size: large;
+    padding: 3px 3px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  .hero {
+      height:100%;
+      width:100%;
+      background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(banner.jpg);
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+  }
