@@ -14,19 +14,21 @@
             $search = $_GET['_Search'];
     ?>
 
-    <div class = top_part>
+   <div class = top_part>
         <h1>Gallery Viewer</h1>
         <form class = "Search" action="Main.php" method="GET">
                 <label for="_Search" style="color: rgb(0, 0, 0);">Search Image:</label>
                 <input type="text" id="_Search" name="_Search" placeholder="Search here">
                 <input type="submit" value="Search">
         </form>
-        <div class = "Clicky"><button class="open-button" style="background-color: rgb(0, 120, 0);
-        color: white;" onclick="location.href='index.php'">Login/Register</button></div>
-        <div class = "Clicky"><button class="open-button" style="background-color: rgb(0, 102, 170);
-        color: white;" onclick="openForm()">Upload</button></div>
+    <div class = "Upload"><button class="open-button" onclick="openForm()">Upload</button></div>
     </div>
     <br><br>
+
+    <div style ="font-family:'Franklin Gothic Medium'; text-align:center; float:center"class="open-button" onclick="location.href='slideshow.php'">SLIDESHOW!
+    </div>
+    
+    <br><br><br><br>
     <?php
     include 'DB_DISPLAY.php'
     ?>
@@ -45,6 +47,7 @@
             <input class = "btn" type="submit" name="Submit">
         </form>
     </div>
+
         <script>
             function openForm() {
                 document.getElementById("U_Form").style.display = "none";
@@ -55,6 +58,5 @@
                 document.getElementById("U_Form").style.display = "block";
             }
         </script>
-    </div>
     </body>
 </html>
